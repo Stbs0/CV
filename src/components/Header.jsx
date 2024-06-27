@@ -1,15 +1,9 @@
-const Header = ({ setShowPerview, showPerview }) => {
-  console.log(window.screen.width)
+const Header = () => {
+ 
   return (
     <header className="flex items-center border-black px-4 py-2 shadow-lg">
       <div className="mr-auto">CV</div>
-      <button
-        disabled={window.screen.width <= 680 ? true : false}
-        onClick={() => setShowPerview(!showPerview)}
-        className="mr-4 rounded-lg bg-gray-700 px-3 py-2 text-white"
-      >
-        {showPerview ? "Hide Preview" : "Show Preview"}
-      </button>{" "}
+      
       <span className="w-10">
         <a href="https://github.com/Stbs0" target="_blank" rel="noreferrer">
           {" "}

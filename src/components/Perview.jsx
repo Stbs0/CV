@@ -1,10 +1,12 @@
 import { useSelector } from "react-redux";
-const Preview = () => {
+const Preview = ({ showPerview }) => {
   const personal = useSelector((state) => state.personal);
   const education = useSelector((state) => state.education);
   const experience = useSelector((state) => state.experience);
   return (
-    <div className="m-3 hidden aspect-[1222/1584] space-y-4 bg-white px-4 py-2 md:block">
+    <div
+      className={`m-3  aspect-[1222/1584] space-y-4 bg-white px-4 py-2 md:block ${showPerview ? "block" : "hidden"} `}
+    >
       <div className="space-y-1 border-b-2 border-black">
         <h1 className="text-2xl font-bold"> {personal.name}</h1>
         <div className="space-x-2">
